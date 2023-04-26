@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 //builder.Services.AddDbContext<CardContext>(opt => opt.UseInMemoryDatabase("CardList"));
-builder.Services.AddDbContext<CardContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("CardsDatabase")));
+builder.Services.AddDbContext<CardContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("CardsDbConnection")));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
